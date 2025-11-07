@@ -1,8 +1,8 @@
 ﻿
 using System;
-Action ShowTimeAction = () => Console.WriteLine("Time:" + DateTime.Now.ToString("HH:mm:ss"));
-Action ShowDayOfTheWeekAction = () => Console.WriteLine("Day: " + DateTime.Now.DayOfWeek);
-Action ShowDataAction = () => Console.WriteLine("Data: " + DateOnly.FromDateTime(DateTime.Now).ToString());
+Action ShowTimeAction = () => Console.WriteLine($"Time: {DateTime.Now.ToString("HH:mm:ss")}");
+Action ShowDayOfTheWeekAction = () => Console.WriteLine($"Day: {DateTime.Now.DayOfWeek}" );
+Action ShowDataAction = () => Console.WriteLine($"Data: {DateOnly.FromDateTime(DateTime.Now).ToString()}" );
 
 Func<double, double, double> S_Triangle = (a, b) => 0.5 * a * b;
 Func<double,double,double>  S_Rectangle= (a,b) => a*b;
